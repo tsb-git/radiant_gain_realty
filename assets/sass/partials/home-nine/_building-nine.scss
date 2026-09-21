@@ -1,0 +1,94 @@
+
+
+.building-9 {
+     &-wrapper {
+          background: var(--h9-secondary-color);
+          box-shadow: 0 4px 27px 0 rgba(0, 0, 0, 0.04);
+          padding: 40px;
+          border-radius: 13px;
+          &:hover {
+               & .building-9-overlay {
+                    opacity: 1;
+                    visibility: visible;
+               }
+          }
+     }
+     &-overlay {
+          width: 96%;
+          height: 100%;
+          background: var(--h9-primary-color);
+          z-index: -1;
+          position: absolute;
+          top: 0;
+          left: 0;
+          rotate: -2deg;
+          transition: all 0.6s ease-in-out;
+          border-radius: 13px;
+          transform: scale(1.03);
+          right: 0;
+          margin: auto;
+          opacity: 0;
+          visibility: hidden;
+     }
+     &-title {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 1.27;
+     }
+     &-icon {
+          & span {
+               width: 104px;
+               height: 102px;
+               line-height: 1;
+               display: inline-flex;
+               justify-content: center;
+               align-items: center;
+               background: #E0E7EA;
+               border-radius: 50%;
+               transition: .4s;
+               &:hover {
+                    background: var(--h9-primary-color);
+               }
+          }
+     }
+     &-btn {
+          font-weight: 500;
+          font-size: 16px;
+          & img {
+               filter: brightness(0) invert(1);
+          }
+          &:hover {
+               color: var(--h9-primary-color) !important;
+          }
+     }
+     &-arrow-box {
+          @media #{$xl,$lg,$md,$xs} {
+               display: none;
+          }
+          & button {
+               transition: all 0.3s ease 0s;
+               position: absolute;
+               left: -110px;
+               top: 50%;
+               transform: translateY(-50%);
+               z-index: 5;
+               @media #{$xxl} {
+                    left: -50px;
+               }
+          }
+          & button.slider-next {
+               margin-bottom: 10px;
+               left: auto;
+               right: -110px;
+               @media #{$xxl} {
+                    right: -50px;
+               }
+          }
+          & button {
+               transition: .4s;
+          }
+     }
+}
+.building-9-active .swiper-slide {
+	margin: 10px 0;
+}

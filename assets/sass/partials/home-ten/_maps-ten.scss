@@ -1,0 +1,81 @@
+.maps-10 {
+     &-area {
+          background: #D2D6D5;
+     }
+     &-support {
+          &-title {
+               font-weight: 700;
+               font-size: 16px;
+               margin-bottom: 14px;
+          }
+          & a {
+               font-weight: 700;
+               font-size: 44px;
+               background-image: linear-gradient(to right, currentColor 0, currentColor 100%);
+               background-position: 0 100%;
+               background-repeat: no-repeat;
+               background-size: 0 1px;
+               transition: all 0.3s, background-size 0.8s;
+               &:hover {
+                   background-size: 100% 1px;
+               }
+               @media #{$xs} {
+                    font-size: 38px;
+               }
+          }
+     }
+     &-item {
+          border: 1px solid rgba(3, 37, 50, 0.12);
+          border-radius: 10px;
+          padding: 22px 25px;
+          margin-bottom: 30px;
+          transition: .4s ease-in-out;
+          @media #{$xl} {
+               padding: 22px 15px;
+          }
+          &:hover {
+               background: var(--h9-secondary-color);
+               & .maps-10-title {
+                    color: hsl(var(--white));
+               }
+               & span {
+                    color: hsl(var(--white));
+               }
+          }
+          & span {
+               font-weight: 400;
+               line-height: 169%;
+               color: #032532;
+               margin-bottom: 0;
+               transition: .3s;
+               @media #{$xl} {
+                    font-size: 14px;
+               }
+               @media #{$xs} {
+                    font-size: 13px;
+               }
+          }
+     }
+     &-title {
+          font-weight: 600;
+          font-size: 24px;
+          transition: .3s;
+     }
+     &-thumb {
+          & img {
+               max-width: inherit;
+               @media #{$xs} {
+                    max-width: 100%;
+               }
+          }
+     }
+     &-address {
+          @media #{$xs} {
+               flex-wrap: wrap;
+               row-gap: 0 !important;
+          }
+          @media #{$sm} {
+               flex-wrap: inherit;
+          }
+     }
+}

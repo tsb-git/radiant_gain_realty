@@ -1,0 +1,41 @@
+.brand-9 {
+     &-area {
+          padding: 60px 0 0;
+     }
+     &-row {
+          border-bottom: 1px solid #B0C1C6;
+          padding-bottom: 60px;
+          &.ten-row {
+               border-bottom: none;
+          }
+     }
+     &-wrapper {
+          display: flex;
+          align-items: center;
+          height: 100px;
+     }
+     &-thumb {
+          & img {
+               cursor: pointer;
+               filter: brightness(0) invert(0);
+               transition: .4s;
+               &:hover {
+                    filter: brightness(1) invert(0);
+               }
+          }
+          &.ten {
+               img {
+                    filter: inherit;   
+               }
+          }
+     }
+     &-active {
+          & .swiper-slide-active {
+               & .brand-9-thumb {
+                    & img {
+                         filter: brightness(1) invert(0);
+                    }
+               }
+          }
+     }
+}
